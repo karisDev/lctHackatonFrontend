@@ -6,7 +6,7 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import { SignPage } from "./pages/SignPage";
+import { SignPage } from "./pages/SignPage/SignPage";
 
 function App() {
   document.body.classList.add("light-theme");
@@ -15,7 +15,9 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<h1>Landing</h1>} />
-          <Route path="/login" element={<SignPage />} />
+          <Route path="/login" element={<Navigate to="/signin" />} />
+          <Route path="/signin" element={<SignPage />} />
+          <Route path="/signup" element={<SignPage isSignup />} />
           <Route
             path="/dashboard"
             element={
