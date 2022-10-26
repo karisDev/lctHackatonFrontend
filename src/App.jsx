@@ -1,10 +1,42 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import { AuthContext } from "./api/AuthContext";
+import PrivateRoute from "./api/PrivateRoute";
+import {
+  BrowserRouter as Router,
+  Navigate,
+  Route,
+  Routes,
+} from "react-router-dom";
+import { SignPage } from "./pages/SignPage";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <div className="App"></div>;
+  document.body.classList.add("light-theme");
+  return (
+    <AuthContext.Provider value={{ user: "user", setUser: "setUser" }}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<h1>Landing</h1>} />
+          <Route path="/login" element={<SignPage />} />
+          <Route
+            path="/dashboard"
+            element={
+              <PrivateRoute>
+                <h1>dashboard</h1>
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <PrivateRoute>
+                <h1>profile</h1>
+              </PrivateRoute>
+            }
+          />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </Router>
+    </AuthContext.Provider>
+  );
 }
 
 export default App;
