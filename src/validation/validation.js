@@ -20,6 +20,7 @@ export const validateRegistration = (data) => {
   }
 
   if (isEmpty(data.password)) errors.password = "Пароль не может быть пустым";
+  console.log(data.password, data.confirmPassword);
   if (data.password !== data.confirmPassword)
     errors.confirmPassword = "Пароли не совпадают";
 

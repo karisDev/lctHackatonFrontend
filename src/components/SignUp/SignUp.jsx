@@ -38,7 +38,6 @@ const SignUp = () => {
       console.log("Success");
     } else {
       setErrors(validationResult.errors);
-      console.log(errors);
     }
   };
 
@@ -81,7 +80,7 @@ const SignUp = () => {
         <IconInput
           error={errors.confirmPassword}
           resolveError={() => setErrors({ ...errors, confirmPassword: "" })}
-          name="passwordRepeat"
+          name="confirmPassword"
           icon={<FontAwesomeIcon icon={faRotateRight} />}
           placeholder="********"
           type="password"
