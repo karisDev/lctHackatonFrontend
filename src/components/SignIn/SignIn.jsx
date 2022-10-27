@@ -1,8 +1,8 @@
 import { faEnvelope, faKey } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { IconInput } from "../inputs/IconInput/IconInput";
-import AccentButton from "../buttons/AccentButton/AccentButton";
+import { IconInput } from "../ui/inputs/IconInput/IconInput";
+import AccentButton from "../ui/buttons/AccentButton/AccentButton";
 import cl from "./SignIn.module.scss";
 import { Link } from "react-router-dom";
 

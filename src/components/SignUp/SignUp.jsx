@@ -5,11 +5,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { IconInput } from "../inputs/IconInput/IconInput";
-import AccentButton from "../buttons/AccentButton/AccentButton";
+import { IconInput } from "../ui/inputs/IconInput/IconInput";
+import AccentButton from "../ui/buttons/AccentButton/AccentButton";
 import cl from "./SignUp.module.scss";
 import { Link } from "react-router-dom";
-import StandartInput from "../inputs/StandartInput/StandartInput";
+import StandartInput from "../ui/inputs/StandartInput/StandartInput";
 import { validateRegistration } from "../../validation/validation";
 import { useState } from "react";
 
