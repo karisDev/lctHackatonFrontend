@@ -6,10 +6,10 @@
   font-size: 1rem;
   font-weight: 500;
   color: #fff;
-  background-color: var(--button-acnt-color);
+  background-color: var(--acnt-color);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   &:hover {
-    background-color: var(--button-acnt-hover-color);
+    background-color: var(--acnt-hover-color);
   }
 }

@@ -16,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<h1>Landing</h1>} />
           <Route path="/login" element={<Navigate to="/signin" />} />
+          <Route path="/register" element={<Navigate to="/signup" />} />
           <Route path="/signin" element={<SignPage />} />
           <Route path="/signup" element={<SignPage isSignup />} />
           <Route

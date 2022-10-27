@@ -12,14 +12,17 @@ html,
 body {
   width: 100%;
   height: 100%;
+  background-color: var(--bg-acnt);
 }
 
+// --mobile-width: 768px; так нельзя, но просто для информации
 .light-theme {
   --bg-main: #fff;
   --bg-acnt: #f6f8fc;
   --text-main-color: #242424;
   --text-acnt-color: #6b7280;
   --input-border-color: #f1f1f1;
-  --button-acnt-color: #3b82f6;
-  --button-acnt-hover-color: #2563eb;
+  --acnt-color: #3b82f6;
+  --acnt-hover-color: #2563eb;
+  --error-color: #ef4444;
 }

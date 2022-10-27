@@ -7,6 +7,21 @@
     flex-direction: column;
     gap: 0.2rem;
   }
+  .heading {
+    display: flex;
+    .error {
+      margin-left: auto;
+      color: var(--error-color);
+      text-align: end;
+    }
+  }
+  .row {
+    display: flex;
+    gap: 1rem;
+    .group {
+      flex: 1;
+    }
+  }
   .no_account {
     display: flex;
     justify-content: center;
@@ -15,11 +30,19 @@
     font-size: 0.9rem;
     color: var(--text-acnt-color);
     a {
-      color: var(--button-acnt-color);
+      color: var(--acnt-color);
       text-decoration: none;
       &:hover {
         text-decoration: underline;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    .row {
+      flex-direction: column;
     }
   }
 }

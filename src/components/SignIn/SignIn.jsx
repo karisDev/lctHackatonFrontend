@@ -1,15 +1,15 @@
 import { faEnvelope, faKey } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { IconInput } from "../inputs/IconInput";
-import AccentButton from "../buttons/AccentButton";
+import { IconInput } from "../inputs/IconInput/IconInput";
+import AccentButton from "../buttons/AccentButton/AccentButton";
 import cl from "./SignIn.module.scss";
 import { Link } from "react-router-dom";
 
 const SignIn = () => {
   return (
     <form className={cl.container}>
-      <h2>Вход</h2>
+      <h2>Вход в систему</h2>
       <div className={cl.group}>
         <p>Почта</p>
         <IconInput
