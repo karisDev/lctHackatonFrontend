@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .container {
   display: flex;
   flex-direction: column;
@@ -32,7 +34,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $mobile-width) {
   .container {
     .row {
       flex-direction: column;

@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .container {
   display: flex;
   height: 100%;
@@ -13,6 +15,10 @@
     overflow: hidden;
     flex-direction: column;
   }
+  .mobile_mask {
+    width: 0;
+    overflow: hidden;
+  }
   &.sidenav_hidden {
     .content {
       border-radius: 0;
@@ -24,9 +30,12 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $mobile-width) {
   .container {
     background-color: var(--bg-main);
+    .sidenav_holder {
+      z-index: 10;
+    }
     .content {
       border-radius: 0;
       box-shadow: none;

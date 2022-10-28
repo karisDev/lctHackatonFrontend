@@ -24,7 +24,9 @@ const DashBoardPage = () => {
         " "
       )}
     >
-      <SideNavbar hidden={isSideNavHidden} />
+      <div className={cl.sidenav_holder}>
+        <SideNavbar hidden={isSideNavHidden} />
+      </div>
       {/* div that holds top nav and main content */}
       <div className={cl.mobile_mask} onClick={() => setIsSideNavHidden(true)}>
         <FontAwesomeIcon className={cl.close_mask} icon={faXmark} />
