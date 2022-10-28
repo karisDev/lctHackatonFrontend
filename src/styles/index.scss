@@ -1,7 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
-
 * {
-  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -16,13 +13,3 @@ body {
 }
 
 // --mobile-width: 768px; так нельзя, но просто для информации
-.light-theme {
-  --bg-main: #fff;
-  --bg-acnt: #f6f8fc;
-  --text-main-color: #242424;
-  --text-acnt-color: #6b7280;
-  --input-border-color: #f1f1f1;
-  --acnt-color: #3b82f6;
-  --acnt-hover-color: #2563eb;
-  --error-color: #ef4444;
-}

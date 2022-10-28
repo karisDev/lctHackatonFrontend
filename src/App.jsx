@@ -7,9 +7,10 @@ import {
   Routes,
 } from "react-router-dom";
 import { SignPage } from "./pages/SignPage/SignPage";
+import DashBoardPage from "./pages/Dashboard/DashBoardPage";
 
 function App() {
-  document.body.classList.add("light-theme");
+  document.body.classList.add("theme");
   return (
     <AuthContext.Provider value={{ user: "user", setUser: "setUser" }}>
       <Router>
@@ -23,7 +24,7 @@ function App() {
             path="/dashboard"
             element={
               <PrivateRoute>
-                <h1>dashboard</h1>
+                <DashBoardPage />
               </PrivateRoute>
             }
           />

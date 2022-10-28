@@ -7,8 +7,17 @@ import cl from "./SignIn.module.scss";
 import { Link } from "react-router-dom";
 
 const SignIn = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = {
+      email: formData.get("email"),
+      password: formData.get("password"),
+    };
+    console.log(data);
+  };
   return (
-    <form className={cl.container}>
+    <form className={cl.container} onSubmit={handleSubmit}>
       <h2>Вход в систему</h2>
       <div className={cl.group}>
         <p>Почта</p>

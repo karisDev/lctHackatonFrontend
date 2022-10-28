@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  height: 100%;
+  background-color: var(--bg-acnt);
+  .content {
+    transition: border-radius 0.3s ease-in;
+    flex: 1;
+    display: flex;
+    background-color: var(--bg-main);
+    border-radius: 25px;
+    padding: 25px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex-direction: column;
+  }
+  &.sidenav_hidden {
+    .content {
+      border-radius: 0;
+    }
+    .mobile_mask {
+      background-color: #00000000;
+      z-index: -1;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    background-color: var(--bg-main);
+    .content {
+      border-radius: 0;
+      box-shadow: none;
+    }
+    .mobile_mask {
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #00000099;
+      transition: background-color 0.1s linear;
+      .close_mask {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        font-size: 20px;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
